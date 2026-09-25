@@ -1,0 +1,30 @@
+@import 'tailwindcss';
+
+/* Pokemon theme tokens. Anything defined here becomes a Tailwind utility,
+   e.g. --color-poke-red gives you bg-poke-red, text-poke-red, border-poke-red. */
+@theme {
+  /* Pokedex shell colors */
+  --color-poke-red: #ee1515;
+  --color-poke-red-dark: #c51010;
+  --color-poke-yellow: #ffcb05;
+  --color-poke-blue: #3b4cca;
+  --color-poke-ink: #1b1b2f;
+
+  /* Official-ish type colors */
+  --color-type-fire: #ee8130;
+  --color-type-water: #6390f0;
+  --color-type-grass: #7ac74c;
+  --color-type-ground: #dfa54f;
+
+  --font-display: 'Fredoka', ui-rounded, system-ui, sans-serif;
+  --font-sans: 'Nunito', system-ui, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* The app is designed light-only so it looks the same for everyone. */
+html {
+  color-scheme: light;
+}
+
+body {
+  @apply bg-slate-100 font-sans text-poke-ink antialiased;
+}
